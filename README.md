@@ -1,12 +1,18 @@
 # Profiling-in-cpp  
 
-** Prerequisites ** CMake "gprof" "gprof2dot" "graphviz(for dot command)"  
+**Prerequisites** CMake "gprof" "gprof2dot" "graphviz(for dot command)"  
 
+1)**Compile with profiling flags "pg"**  
 cmake -DCMAKE_CXX_FLAGS=-pg -DCMAKE_EXE_LINKER_FLAGS=-pg -DCMAKE_SHARED_LINKER_FLAGS=-pg &lt;source-dir&gt;   
+2)**Run the executable like normal**  
 ./&lt;executable&gt;    
+3)**Generate Profile Data using GNU gprof**   
 gprof &lt;executable&gt; gmon.out &gt; output.txt    
+4)**Install gprof2dot with pip**    
 pip install gprof2dot    
+5)**Convert to dot file**  
 gprof2dot -o output.dot output.txt --node-label=self-time    
+6)**Convert to png file**  
 dot -Tpng -o output.png output.dot   
 
 
