@@ -1,4 +1,8 @@
 # Profiling-in-cpp  
+
+# Prerequisites 
+CMake "gprof" "gprof2dot" "graphviz(for dot command)"  
+
 cmake -DCMAKE_CXX_FLAGS=-pg -DCMAKE_EXE_LINKER_FLAGS=-pg -DCMAKE_SHARED_LINKER_FLAGS=-pg &lt;source-dir&gt;   
 ./&lt;executable&gt;    
 gprof &lt;executable&gt; gmon.out &gt; output.txt    
