@@ -25,5 +25,5 @@ valgrind --tool=massif ./&lt;executable&gt;
 The program will execute (slowly). Upon completion, no summary statistics are printed to Valgrind's commentary; all of Massif's profiling data is written to a file. By default, this file is called massif.out.<pid>, where <pid> is the process ID, although this filename can be changed with the --massif-out-file option.  
 2)**Print the output file**  
 ms_print massif.out.12345  
-
+3)**Use massif-visualizer to see where is the issue**  
 
