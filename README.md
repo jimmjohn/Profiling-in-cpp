@@ -17,3 +17,13 @@ dot -Tpng -o output.png output.dot
 
 
 The png files are output of profile  for the same codes, for different dataset (data & simulation) . The data was taking more time to run the same number of events. When profiled, it shows all the events in the data are triggered, but in simulation its not. It was easy to find from the png file after profiling. It shows how much times each one is called and called and how much "time"  it took for each.
+
+
+**Memory usage check with valgrind**  
+1)**Run the program with valgrind**  
+valgrind --tool=massif ./&lt;executable&gt;   
+The program will execute (slowly). Upon completion, no summary statistics are printed to Valgrind's commentary; all of Massif's profiling data is written to a file. By default, this file is called massif.out.<pid>, where <pid> is the process ID, although this filename can be changed with the --massif-out-file option.  
+2)**Print the output file**  
+ms_print massif.out.12345  
+
+
