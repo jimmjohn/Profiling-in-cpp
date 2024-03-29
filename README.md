@@ -32,7 +32,7 @@ sudo apt-get install massif-visualizer
 4)**Expand the snapshots and it will show which function and the line number it takes more memorey**   
 Attached pics from massif-visualizer   
 
-Here we found the TH3F histogram of dimension (500*500*500) taking 500MB. And we had three histograms.  
+Here we found the TH3F histogram of dimension (500 X 500 X 500) taking 500MB. And we had three histograms.  
 Due to this we converted all the TH3F histos to THnSparseD histos.    
 
 
