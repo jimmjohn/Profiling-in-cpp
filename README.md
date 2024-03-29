@@ -25,5 +25,18 @@ valgrind --tool=massif ./&lt;executable&gt;
 The program will execute (slowly). Upon completion, no summary statistics are printed to Valgrind's commentary; all of Massif's profiling data is written to a file. By default, this file is called massif.out.<pid>, where <pid> is the process ID, although this filename can be changed with the --massif-out-file option.  
 2)**Print the output file**  
 ms_print massif.out.12345  
-3)**Use massif-visualizer to see where is the issue**  
+3)**Use massif-visualizer to see where is the issue** 
+sudo add-apt-repository ppa:kubuntu-ppa/backports    
+sudo apt-get update
+sudo apt-get install massif-visualizer
+4)**Expand the snapshots and it will show which function and the line number it takes more memorey**   
+Attached pics from massif-visualizer   
+
+Here we found the TH3F histogram of dimension (500*500*500) taking 500MB. And we had three histograms.  
+Due to this we converted all the TH3F histos to THnSparseD histos.    
+
+
+
+
+
 
