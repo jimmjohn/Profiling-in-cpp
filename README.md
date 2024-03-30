@@ -28,7 +28,7 @@ ms_print massif.out.12345
 3)**Use massif-visualizer to see where is the issue** 
 sudo add-apt-repository ppa:kubuntu-ppa/backports    
 sudo apt-get update
-sudo apt-get install massif-visualizer
+sudo apt-get install massif-visualizer    
 4)**Expand the snapshots and it will show which function and the line number it takes more memorey**   
 Attached pics from massif-visualizer   
 
